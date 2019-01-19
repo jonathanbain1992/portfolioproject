@@ -10,6 +10,22 @@
   </head>
 
   <body>
-    <%= yield %>
+   
+      <nav>
+    <div class="nav-wrapper ">
+    <div class="container">
+      <a href="#" class="brand-logo brand-logo-extended">Jonathan Daniel Bain</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href=<%=link_to "#" %>>Developer</a></li>
+        <li><a href="badges.html">Tutor</a></li>
+        <li><a href="collapsible.html">Photographer</a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <div class="container">
+     <%= yield %>
+     </div>
+     <%= javascript_include_tag 'application', "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" %>
   </body>
 </html>
