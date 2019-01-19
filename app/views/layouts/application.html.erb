@@ -19,6 +19,12 @@
         <li><a href=<%=link_to "#" %>>Developer</a></li>
         <li><a href="badges.html">Tutor</a></li>
         <li><a href="collapsible.html">Photographer</a></li>
+        <li><a><% if signed_in? %>
+  <%= current_user.email %>
+  <%= button_to "Sign out", sign_out_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign in", sign_in_path %>
+<% end %> </li></a>
       </ul>
     </div>
     </div>
